@@ -5,8 +5,8 @@
   "description": "inittest",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
-    "migrate": "npx prisma migrate dev",
-    "studio": "npx prisma studio"
+    "mig": "npx prisma migrate dev",
+    "stu": "npx prisma studio"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@graphql-tools/schema": "^9.0.19",
     "@prisma/client": "^4.13.0",
     "apollo-server": "^2.25.2",
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "graphql": "^15.8.0"
   },

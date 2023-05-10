@@ -55,6 +55,14 @@
 !에러생겨서 파일에 다음코드 추가  "type": "module",
 !이후 각 파일마다 import할때 .js까지 전부 입력
 
-*npm i dotenv 설치
+*npm i dotenv 설치 3.11 dotenv확인
+!server.js 파일의 맨위에 아래 두줄추가
+!import dotenv from "dotenv"
+!dotenv.config();
+
+*npm i bcrypt 설치
+
+*hash vs hashSync 비교
+!hash는 비동기(추천), hashSync는 동기(await 필요 X)로 사용할 수 있다
 
 -->

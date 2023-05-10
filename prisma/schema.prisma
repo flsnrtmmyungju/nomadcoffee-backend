@@ -12,11 +12,15 @@ datasource db {
 
 // ?표시 적을시 required아님
 // 여기수정시 typeDefs도 같이수정해야함
-model Movie {
-  id        Int      @id @default(autoincrement())
-  title     String
-  year      Int
-  genre     String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model User {
+  id             Int      @id @default(autoincrement())
+  username       String   @unique
+  email          String   @unique
+  name           String
+  location       String?
+  password       String
+  avatarURL      String?
+  githubUsername String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }
