@@ -5,22 +5,11 @@ export default gql`
     id          :    String!   
     username    :    String! 
     email       :    String!
-    name        :    String!
+    name        :    String
     location    :    String
     avatarURL   :    String
     githubUsername : String
-    createdAt   :    String!
-    updatedAt   :    String!
-  }
-  type Query {
-    seeProfile(username:String!):User
-  }
-  type Mutation {
-    createAccount (
-      username    :    String! 
-      email       :    String!
-      name        :    String!
-      password    :    String!
-      ) : User
+    createdAt   :    String
+    updatedAt   :    String
   }
 ` 

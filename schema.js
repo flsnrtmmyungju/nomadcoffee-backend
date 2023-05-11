@@ -17,7 +17,7 @@ return await import(url.pathToFileURL(path));
 });
 
 const loadedResolvers = await loadFiles(
-`${__dirname}/**/*.{queries,mutations}.js`,
+`${__dirname}/**/*.{queries,resolvers}.js`,
 {
 ignoreIndex: true,
 requireMethod: async path => {
