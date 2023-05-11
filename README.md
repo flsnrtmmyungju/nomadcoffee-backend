@@ -5,6 +5,8 @@
 *포트실행중이라 죽이기
 ! 서버 PID확인  lsof -i :4000
 ! 서버 중지  kill -9 pid  (ex kill -9 27106)
+! sudo service postgresql status
+! sudo service postgresql start
 *prisma migrate 명령어  npm run migrate dev
 *prisma studio 명령어 npm run studio
 
@@ -33,7 +35,7 @@
 !sudo service postgresql start
 !sudo -u postgres psql -c 'SHOW config_file'           --이걸로 파일위치확인
 !sudo nano  /etc/postgresql/14/main/postgresql.conf    --이걸로파일염
-!listen_addresses = '*'                                --이거추가후 저장
+!listen_addresses = '172.19.64.170'                    --이거추가후 저장
 !hostname -I                                           --이걸로 ip 알아내서 아래 ip 작성
 !sudo nano /etc/postgresql/14/main/pg_hba.conf         --이걸로 파일열고
 !host  all  all   172.19.64.170/32   trust             --맨밑에 이거추가
@@ -59,10 +61,18 @@
 !server.js 파일의 맨위에 아래 두줄추가
 !import dotenv from "dotenv"
 !dotenv.config();
+!다른곳에서 process.env.변수 이런식으로 env파일의 변수 가져올수있음
 
 *npm i bcrypt 설치
 
 *hash vs hashSync 비교
 !hash는 비동기(추천), hashSync는 동기(await 필요 X)로 사용할 수 있다
+
+*npm i jsonwebtoken 설치
+!.env 파일에 SECRET_KEY =  설정(CodeIgniter Encryption Keys-https://randomkeygen.com/)
+
+*server.js 파일에서 전역에서 쓸수있게 토큰설정
+!context으로 설정해놓음 가져가는곳에서는 (_,{name},{token})등의 3번째변수자리에서 사용
+
 
 -->
